@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ajax with Jquery</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">$( document ).ready(function() {
+	var form = $('#form1');
+	form.submit(function(e) {
+
+		$.ajax({
+			type : form.attr('method'),
+			url : form.attr('action'),
+			data : form.serialize(),
+			success : function(data) {
+				var result = data;
+				$('#result').attr("value", result);
+
+			}
+		});
+
+		e.preventDefault();
+	});});
+</script>
+
+</head>
+<body>
+	<h1>Ajax with Jquery Simple Example</h1>
+	<br>
+	<form name="form1" method="GET" action="Ajaxexample" id="form1">
+		<table>
+			<tr>
+				<td>Number 1</td>
+				<td><input type="text" name="n1" /></td>
+			</tr>
+			<tr>
+				<td>Number 2</td>
+				<td><input type="text" name="n2" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Calculate" /></td>
+			</tr>
+			<tr>
+				<td>Result</td>
+				<td><input type="text" value="" id="result" /></td>
+			</tr>
+		</table>
+	</form>
+<!-- 	<script type="text/javascript">
+		var form = $('#form1');
+		form.submit(function() {
+			alert('immer fies zu david sein');
+			$.ajax({
+				type : form.attr('method'),
+				url : form.attr('action'),
+				data : form.serialize(),
+				success : function(data) {
+					var result = data;
+					$('#result').attr("value", result);
+				}
+			});
+			return false;
+		});
+	</script> -->
+</body>
+</html>
