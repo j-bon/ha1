@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	function weiter() {
+		document.location.href = "second.html";
+	}
+	window.setTimeout("Weiter()", 5000)
+</script>
+</head>
+<body>
+	<h1>Übersicht der Smart Meter</h1>
+	<br>
+
+	<table>
+		<tr>
+			<td>Produkt 1</td>
+			<td><input type="button" id="1" onclick="weiter()" value="Detailansicht zu Pr1" /></td>
+		</tr>
+		<tr>
+			<td>Produkt 2</td>
+			<td><input type="button" id="2" onclick="weiter()" value="Detailansicht zu Pr2" /></td>
+		</tr>
+	</table>
+
+</body>
+</html>
