@@ -16,7 +16,7 @@ function setAmperage(){
 }
 
 function genRandomNumber(min, max){
-    return Math.floor(Math.random()*(max-min+1)+min);
+    return Math.round((Math.random()*(max-min+1)+min)*10)/10;
 }
 
 function warningMaxAmpereage(){
