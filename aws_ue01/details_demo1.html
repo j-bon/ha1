@@ -7,29 +7,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./script.js" async></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			$("#sub").click(function () {
-
-				nutz = document.getElementById("nutz").value;
-				//ger = $("#ger").attr("value");
-				aver = document.getElementById("aver").value;
-				//$("#maxib").attr("value");
-
-				$("#tabelle").append(
-					"<tr>" +
-					"<td>" + (nutz) + 
-					"<td>" + (aver) + 
-					"<td bgcolor=\"#" + (nutz) + (aver) + "\"></td>" +
-					"</tr>"
-					);
-
-			});
-
-		});
-	</script>
-
 </head>
 
 <body>
@@ -63,13 +40,14 @@
 				<input id = "nutz"type="text" name="user" placeholder="AM20"><br>
 				Aktueller Verbrauchswert:<br>
 				<input id = "aver" type="number" name="kwh" placeholder="4310"> kWh
-				<input type="button" value="speichern" id="sub" />
+				<input type="button" value="speichern" id="readSubmit" />
 			</form>
 			<br>
 			<table id="tabelle">
 				<tr id="reihe1">
 					<th>Geräterkennung</th>
 					<th>Maximalbelastung</th>
+					<th>Datum</th>
 				</tr>
 			</table>
 

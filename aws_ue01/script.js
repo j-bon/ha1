@@ -3,6 +3,8 @@ $( document ).ready(function() {
     setVoltage();
     setAmperage();
     warningMaxAmpereage();
+    
+    $("#readSubmit").click(read);
 
 });
 
@@ -25,4 +27,18 @@ function warningMaxAmpereage(){
     if(currentAmperage > maxAmperage){
         $('#warningMaxAmperage').append('<p>Warnung! Aktueller Belastungswert liegt über dem Maximalwert. Kontaktieren Sie einen Techniker.</p>')
     }
+}
+
+function read() {
+    nutz = $('#nutz').val();
+    aver = $('#aver').val();
+    date = new Date();
+
+    $("#tabelle").append(
+        "<tr>" +
+        "<td>" + nutz + 
+        "<td>" + aver +
+        "<td>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() +
+        "</tr>"
+    );
 }
