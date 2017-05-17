@@ -7,12 +7,35 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./script.js" async></script>
 
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#sub").click(function () {
+
+				nutz = document.getElementById("nutz").value;
+				//ger = $("#ger").attr("value");
+				aver = document.getElementById("aver").value;
+				//$("#maxib").attr("value");
+
+				$("#tabelle").append(
+					"<tr>" +
+					"<td>" + (nutz) + 
+					"<td>" + (aver) + 
+					"<td bgcolor=\"#" + (nutz) + (aver) + "\"></td>" +
+					"</tr>"
+					);
+
+			});
+
+		});
+	</script>
+
 </head>
 
 <body>
 
 	<h2>Detailanzeige</h2>
-    
+
 	<section>
 
 		<article id="lesson-2">
@@ -35,12 +58,19 @@
 
 			<h4>Hier können Sie Ihren aktuellen Zählerstand übermitteln:</h4>
 
-			<form>
+			<form name="Input" action="#">
 				Nutzerkennung:<br>
-				<input type="text" name="user" placeholder="AM20"><br>
+				<input id = "nutz"type="text" name="user" placeholder="AM20"><br>
 				Aktueller Verbrauchswert:<br>
-				<input type="number" name="kwh" placeholder="4310"> kWh
+				<input id = "aver" type="number" name="kwh" placeholder="4310"> kWh
+				<input type="button" value="speichern" id="sub" />
 			</form>
+			<table id="tabelle">
+				<tr id="reihe1">
+					<th>Geräterkennung</th>
+					<th>Maximalbelastung</th>
+				</tr>
+			</table>
 
 		</article>
 
