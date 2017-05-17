@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Meters</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js" async></script>
+
+</head>
+
+<body>
+
+<h2>Detailanzeige</h2>
+
+<section>
+
+    <article id="lesson-2">
+
+        <h2>Model Nr. 2</h2>
+
+        <p><img src="smart-meter_1.jpg"/></p>
+        <p>Gerätekennung: CR-52753339</p>
+        <p>Maximalbelastung:</p>
+        <p id="maxAmperage">66</p>
+
+        <h4>Aktuelle Daten:</h4>
+        <p>Anliegende Spannung: </p>
+        <p id="voltage"></p>
+
+        <p>Atuelle Belastung: </p>
+        <p id="amperage"></p>
+
+        <div id="warningMaxAmperage"></div>
+
+        <h4>Hier können Sie Ihren aktuellen Zählerstand übermitteln:</h4>
+
+        <form>
+            Nutzerkennung:<br>
+            <input type="text" name="user" placeholder="AM20"><br>
+            Aktueller Verbrauchswert:<br>
+            <input type="number" name="kwh" placeholder="4310"> kWh
+        </form>
+
+    </article>
+
+</section>
