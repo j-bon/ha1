@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Smart Meters</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./script.js" async></script>
+
+</head>
+
+<body>
+	<h1 class="active"> Übersicht: Smart Meters</h1>
+
+	<table>
+			<tr>
+				<th colspan="3"><h2>Smart Meters</h2></th>
+			</tr>
+			<tr>
+				<th>Gerätekennung</th>
+				<th>Produktbild</th>
+				<th>Maximalbelastung</th>
+			</tr>
+			<tr>
+				<td>Model 1 <br/> <input type="button" id="detail_1" value="Detailansicht" onclick="window.location='details.html'"></td>
+				<td ><img src="smart-meter_1.jpg"/></td>
+				<td>55 A</td>
+			</tr>
+			<tr>
+				<td>Model 2 <br/> <input type="button" id="detail_2" value="Detailansicht"></td>
+				<td><img src="smart-meter_2.jpg"/></td>
+				<td>66 A</td>
+			</tr>
+			<tr>
+				<td>Model 3 <br/> <input type="button" id="detail_3" value="Detailansicht"></td>
+				<td><img src="smart-meter_3.jpg" height="150" /></td>
+				<td>77 A</td>
+			</tr>
+	</table>
+</body>
+</html>
