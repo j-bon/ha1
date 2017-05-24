@@ -9,12 +9,12 @@ $( document ).ready(function() {
 });
 
 function setVoltage(){
-    $('#voltage').text(genRandomNumber(220, 240));
+    $('#voltage').text(genRandomNumber(220, 240)+"V");
 }
 
 function setAmperage(){
     max = parseFloat($('#maxAmperage').text()) + 5 ;
-    $('#amperage').text(genRandomNumber(0, max));
+    $('#amperage').text(genRandomNumber(0, max)+"A");
 }
 
 function genRandomNumber(min, max){
@@ -38,7 +38,7 @@ function read() {
         "<tr>" +
         "<td>" + nutz + 
         "<td>" + aver +
-        "<td>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + 
+        "<td>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + 
         "</tr>"
     );
 }
