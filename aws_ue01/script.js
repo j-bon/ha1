@@ -38,7 +38,7 @@ function read() {
         "<tr>" +
         "<td>" + nutz + 
         "<td>" + aver +
-        "<td>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + 
+        "<td>" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + 
         "</tr>"
     );
 }
