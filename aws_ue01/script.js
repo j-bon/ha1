@@ -34,11 +34,11 @@ function read() {
     aver = $('#aver').val();
     date = new Date();
 
-    $("#tabelle").append(
+    $("#detailstable").append(
         "<tr>" +
         "<td>" + nutz + 
         "<td>" + aver +
-        "<td>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() +
+        "<td>" + date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + 
         "</tr>"
     );
 }

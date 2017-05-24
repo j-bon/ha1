@@ -9,47 +9,50 @@
 </head>
 
 <body>
+	<div id="header">
+	<h2>Detailanzeige - Model Nr. 2</h2>
+	<p><img src="smart-meter_2.jpg"/></p>
+	</div>
 
-    <h2>Detailanzeige</h2>
+			<div id="smmetadata">
+			<h4>Gerätedaten</h4>
+			<p>Gerätekennung:</p>
+			<p>CR-52753339</p>
+			<p>Maximalbelastung:</p>
+			<p id="maxAmperage">66</p>
+			</div>
 
-    <section>
+			<div id="actualdata">
+			<h4>Aktuelle Daten</h4>
+			<p>Anliegende Spannung: </p>
+			<p id="voltage"></p>
 
-        <article id="lesson-2">
+			<p>Aktuelle Belastung: </p>
+			<p id="amperage"></p>
+			</div>
 
-            <h2>Model Nr. 2</h2>
+			<div id="inputdata">
+			<h4>Hier aktuellen Zählerstand übermitteln:</h4>
 
-            <p><img src="smart-meter_1.jpg"/></p>
-            <p>Gerätekennung: CR-52753339</p>
-            <p>Maximalbelastung:</p>
-            <p id="maxAmperage">66</p>
+			<form name="Input" action="#">
+				Nutzerkennung:<br>
+				<input id = "nutz"type="text" name="user" placeholder="AM20"><br>
+				Aktueller Verbrauchswert:<br>
+				<input id = "aver" type="number" name="kwh" placeholder="4310"> kWh
+				<input type="button" class="button" value="speichern" id="readSubmit" />
+			</form>
+			<br>
+			<table id="detailstable">
+				<tr id="reihe1">
+					<th id="thd">Geräterkennung</th>
+					<th id="thd">Maximalbelastung</th>
+					<th id="thd">Datum</th>
+				</tr>
+			</table>
+			</div>
 
-            <h4>Aktuelle Daten:</h4>
-            <p>Anliegende Spannung: </p>
-            <p id="voltage"></p>
-
-            <p>Aktuelle Belastung: </p>
-            <p id="amperage"></p>
-
-            <div id="warningMaxAmperage"></div>
-
-            <h4>Hier können Sie Ihren aktuellen Zählerstand übermitteln:</h4>
-
-            <form name="Input" action="#">
-                Nutzerkennung:<br>
-                <input id = "nutz"type="text" name="user" placeholder="AM20"><br>
-                Aktueller Verbrauchswert:<br>
-                <input id = "aver" type="number" name="kwh" placeholder="4310"> kWh
-                <input type="button" value="speichern" id="readSubmit" />
-            </form>
-            <br>
-            <table id="tabelle">
-                <tr id="reihe1">
-                    <th>Geräterkennung</th>
-                    <th>Maximalbelastung</th>
-                    <th>Datum</th>
-                </tr>
-            </table>
-
-        </article>
-
-    </section>
+			<footer>
+				<div id="warningMaxAmperage"></div>
+			</footer>
+</body>
+</html>

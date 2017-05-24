@@ -11,49 +11,50 @@
 
 <body>
 
-	<h2>Detailanzeige</h2>
+	<div id="header">
+	<h2>Detailanzeige - Model Nr. 1</h2>
+	<p><img src="smart-meter_1.jpg"/></p>
+	</div>
 
-	<section>
-
-		<article id="lesson-2">
-
-			<h2>Model Nr. 1</h2>
-
-			<p><img src="smart-meter_1.jpg"/></p>
-			<p>Gerätekennung: BR-52793779</p>
+			<div id="smmetadata">
+			<h4>Gerätedaten</h4>
+			<p>Gerätekennung:</p>
+			<p>BR-52793779</p>
 			<p>Maximalbelastung:</p>
 			<p id="maxAmperage">55</p>
+			</div>
 
-			<h4>Aktuelle Daten:</h4>
+			<div id="actualdata">
+			<h4>Aktuelle Daten</h4>
 			<p>Anliegende Spannung: </p>
-			<p id="voltage"></pid></p>
+			<p id="voltage"></p>
 
 			<p>Aktuelle Belastung: </p>
 			<p id="amperage"></p>
+			</div>
 
-			<div id="warningMaxAmperage"></div>
-
-			<h4>Hier können Sie Ihren aktuellen Zählerstand übermitteln:</h4>
+			<div id="inputdata">
+			<h4>Hier aktuellen Zählerstand übermitteln:</h4>
 
 			<form name="Input" action="#">
 				Nutzerkennung:<br>
 				<input id = "nutz"type="text" name="user" placeholder="AM20"><br>
 				Aktueller Verbrauchswert:<br>
 				<input id = "aver" type="number" name="kwh" placeholder="4310"> kWh
-				<input type="button" value="speichern" id="readSubmit" />
+				<input type="button" class="button" value="speichern" id="readSubmit" />
 			</form>
 			<br>
-			<table id="tabelle">
+			<table id="detailstable">
 				<tr id="reihe1">
-					<th>Geräterkennung</th>
-					<th>Maximalbelastung</th>
-					<th>Datum</th>
+					<th id="thd">Geräterkennung</th>
+					<th id="thd">Maximalbelastung</th>
+					<th id="thd">Datum</th>
 				</tr>
 			</table>
+			</div>
 
-		</article>
-
-	</section>
-
+			<footer>
+				<div id="warningMaxAmperage"></div>
+			</footer>
 </body>
 </html>

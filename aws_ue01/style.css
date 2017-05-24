@@ -1,30 +1,101 @@
-.active {
-}
-
 body {
-  max-width: 600px;
-  margin: 50px auto 300px;
-  font-family: sans-serif;
-  line-height: 1.6;
+	max-width: 900px;
+	margin: 50px auto 300px;
+  	font-family: sans-serif;
+  	line-height: 1.6;
 }
 
-table, th {
-	border: 2px; 
-	border-style: solid;
+
+#maintable {
 	border-spacing: 2px;
-	border-collapse: separate;
+	border-collapse: initial;
+	background-color: white;
+	margin: auto;
+}
+
+#detailstable{
+	border-spacing: 2px;
+	border-collapse: initial;
+	background-color: white;
+	margin: auto;
+}
+
+#thd {
+	border-spacing: 1px;
+	width: 300px;
+	background-color: white;
+	margin: auto;
 }
 
 td {
 	border: 1px;
-	border-style: inset;
+	border-style: groove;
 	padding: 1px;
 	text-align: center;
 }
 
+.button {
+	background-color: darkblue;
+    color: white;
+}
+
 img {
-	/*display: block;*/
     margin-left: auto;
     margin-right: auto;
 	height: 120px;
+}
+
+/*gilt für Index und beide Details Seiten*/
+#header {
+	background-color: lightsteelblue;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* zentrale Inhalte des Index*/
+#value {
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	background-color: lightsteelblue;
+	border-radius: 5px;
+}
+
+/* gliederung der Elemente auf der Detail Seite*/
+#smhead {
+	float: initial;
+}
+
+#smmetadata {
+	float: left;
+}
+
+#actualdata {
+	float: left;
+	margin-left: 60px;
+	
+}
+
+#inputdata {
+	float: right;
+	width: 350px;
+}
+
+#readSubmit {
+	margin-left: 50px;
+}
+
+
+/*warnung für Belastung soll unten "angedockt" werden*/
+footer {
+	position: fixed;
+	padding: 10px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#warningMaxAmperage {
+	color: red;
+	background-color: yellow;
 }
